@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/outside_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,28 +10,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_blue_dark"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.tuckingfypos.to_do_list.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
+        android:id="@+id/list_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
+            android:id="@+id/list_header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
-        <TextView
-            android:id="@+id/footer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New TextView"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:background="@android:color/holo_blue_light"
+            android:text="This is a Content Header"
+            android:textStyle="bold"
+            android:textSize="25dp"
             />
     </LinearLayout>
+
+
+    <EditText
+        android:text="start a new list here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="(new to-do list)"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_blue_light"
+
+        />
 </RelativeLayout>
